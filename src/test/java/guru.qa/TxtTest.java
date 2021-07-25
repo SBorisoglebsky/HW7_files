@@ -19,15 +19,7 @@ public class TxtTest {
 
     @Test
     void simpleTxtTest() throws Exception{
-        InputStream stream = fileStream.openFile("import_ou_csv.txt");
-        /*String s;
-        s = stream.toString();*/
-
         String s =  FileUtils.readFileToString(new File("src/test/resources/Hello.txt"), StandardCharsets.UTF_8);
-
-        System.out.println(s);
-                //new String(stream.readAllBytes(), "UTF-8");*/
-
         assertTrue(s.contains("Hello"));
     }
 }
